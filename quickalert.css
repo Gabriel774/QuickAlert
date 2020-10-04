@@ -1,8 +1,7 @@
 .divmessage {
     position: fixed;
     width: 65%;
-    height: 250px;
-    /* you can edit the message height here! */
+    height: 250px; /* you can edit the message height here! */
     background-color: white;
     top: 50px;
     text-align: center;
