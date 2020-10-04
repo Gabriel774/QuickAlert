@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Alert - demo</title>
     <script src="../quickalert.js"></script>
     <link rel="stylesheet" href="../quickalert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+
     <style>
         * {
             font-family: arial;
@@ -73,7 +74,7 @@
 </head>
 
 <body>
-    <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px;"><span style="color: #0288d1;">Q</span>uick
+    <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px; font-family: 'Noto Sans JP', sans-serif;"><span style="color: #0288d1;">Q</span>uick
         <span style="color: tomato;">A</span>lert</h1>
     <h3 style="text-align:center;">A simple way to add an alert to your project</h3>
     <h2 style="text-align: center; margin-top: 100px;">Examples</h2>
@@ -84,8 +85,8 @@
         </div>
         <div class="demo">
             <h3>Enter a title and message in the inputs bellow!</h3>
-            <input type="text" name="" id="text" class="inp" placeholder="Title">
-            <input type="text" name="" id="text2" class="inp" placeholder="Message">
+            <input type="text" id="text" class="inp" placeholder="Title">
+            <input type="text" id="text2" class="inp" placeholder="Message">
             <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Click
                 Me</button>
         </div>
