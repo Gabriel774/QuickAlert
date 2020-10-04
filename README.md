@@ -41,3 +41,5 @@ both trigger and target proprieties are optionals, you can just add a message an
                 })
             }
         }
+        
+  Check the demo to see more of how it works.
