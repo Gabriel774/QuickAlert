@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Alert - demo</title>
+    <script src="../quickalert.js"></script>
+    <link rel="stylesheet" href="../quickalert.css">
+    <style>
+        * {
+            font-family: arial;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .demo {
+            text-align: center;
+        }
+
+        .btn {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0px;
+            outline: 0;
+            background-color: transparent;
+            padding: 7px;
+            font-size: 14pt;
+            border-color: #29b6f6;
+            color: #29b6f6;
+            transition: all .2s;
+        }
+
+        .btn:hover {
+            background-color: #29b6f6;
+            color: white;
+        }
+
+        .btn:active {
+            background-color: #2b9ed3;
+        }
+
+        .inp {
+
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+
+            font-size: 15pt;
+            outline: 0;
+            border-radius: 0;
+        }
+
+        @media (max-width: 780px) {
+            #container {
+                display: block;
+            }
+
+            .demo {
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px;"><span style="color: #0288d1;">Q</span>uick
+        <span style="color: tomato;">A</span>lert</h1>
+    <h3 style="text-align:center;">A simple way to add an alert to your project</h3>
+    <h2 style="text-align: center; margin-top: 100px;">Examples</h2>
+    <div id="container">
+        <div class="demo">
+            <h3>Click in the button bellow to active an alert!</h3>
+            <button id="alertbtn1" class="btn">Click Me</button>
+        </div>
+        <div class="demo">
+            <h3>Enter a title and message in the inputs bellow!</h3>
+            <input type="text" name="" id="text" class="inp" placeholder="Title">
+            <input type="text" name="" id="text2" class="inp" placeholder="Message">
+            <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Click
+                Me</button>
+        </div>
+    </div>
+    <h4 style="text-align: center; margin-top: 120px;">Check the code script or the documentation for more details</h4>
+    <script>
+        /* the use of an Quick alert is very simple, there is four proprieties:
+        title: The title of your alert. 
+
+        message: The message of your alert (You can set just a message or just a title).
+
+        trigger: The event trigger of the alert, it must be a JavaScript event trigger (the trigger propriety is optional),
+        example: "click", "mouseleave", "mouseenter"
+
+        target: if you set a trigger propriety, you must set an target for the trigger, it's selected by a querySelecctor, so you must use his
+        synthax. for example use "#target" to select an element by id.
+
+        both trigger and target proprieties are optionals, you can just add a message and title!*/
+
+
+        //simple use
+        new quickal({
+            title: "This is a Quick Alert :D",
+            message: "A simple way to make a personalized alert in your project!",
+            trigger: "click",
+            target: "#alertbtn1"
+        })
+
+        //personalized use
+        function showalert() {
+            const txt2 = document.querySelector("#text2")
+            const txt = document.querySelector("#text")
+            if (txt.value.length == 0 && txt2.value.length == 0) {
+                new quickal({
+                    title: "Error",
+                    message: "There is no text :("
+                })
+            } else {
+                new quickal({
+                    title: txt.value,
+                    message: txt2.value
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
