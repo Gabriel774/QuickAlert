@@ -19,8 +19,9 @@
         }
 
         .demo {
+            height: 250px;
             text-align: center;
-            width: 500px;
+            width: 600px;
         }
 
         .btn {
@@ -60,38 +61,59 @@
             border-radius: 0;
         }
 
+        .title-margin {
+            margin-top: 50px;
+        }
+
+        .line {
+            border-left: solid 2px rgb(59, 59, 59);
+            height: 190px;
+        }
+
         @media (max-width: 780px) {
+            .line {
+                display: none;
+            }
+
+            .title-margin {
+                margin-top: 10px;
+            }
+
             #container {
                 display: block;
             }
 
             .demo {
-                margin-top: 50px;
                 width: auto;
+                height: 200px;
             }
+
         }
     </style>
 </head>
 
 <body>
-    <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px; font-family: 'Noto Sans JP', sans-serif;"><span style="color: #0288d1;">Q</span>uick
+    <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px; margin-top: 25px; font-family: 'Noto Sans JP', sans-serif;">
+        <span style="color: #0288d1;">Q</span>uick
         <span style="color: tomato;">A</span>lert</h1>
     <h3 style="text-align:center;">A simple way to add an alert to your project</h3>
     <h2 style="text-align: center; margin-top: 100px;">Examples</h2>
     <div id="container">
         <div class="demo">
-            <h3>Click in the button bellow to active an alert!</h3>
-            <button id="alertbtn1" class="btn">Click Me</button>
+            <h3 class="title-margin">Click in the button below to active an alert!</h3>
+            <button id="alertbtn1" class="btn">Click me</button>
         </div>
+
+        <hr class="line">
+
         <div class="demo">
-            <h3>Enter a title and message in the inputs bellow!</h3>
+            <h3 class="title-margin">Enter a title and message in the inputs below!</h3>
             <input type="text" id="text" class="inp" placeholder="Title">
             <input type="text" id="text2" class="inp" placeholder="Message">
-            <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Click
-                Me</button>
+            <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Show alert</button>
         </div>
     </div>
-    <h4 style="text-align: center; margin-top: 120px;">Check the code or the <a
+    <h4 style="text-align: center; margin-top: 50px; margin-bottom: 20px;">Check the code or the <a
             href="https://github.com/Gabriel774/QuickAlert">GitHub documentation</a> for more details.</h4>
     <script>
         /* the use of an Quick alert is very simple, there is four proprieties:
