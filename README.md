@@ -1,38 +1,40 @@
 # Quick Alert
-Quick Alert is a simple way to add personalized alerts in your project
+Quick Alert é uma maneira rápida de adicionar alertas personalizados a seu projeto
 
-the use of an Quick alert is very simple, there is four proprieties:
+o uso do Quick Alert é muito simples, você pode passar um objeto com até quatro propriedades:
 
-title: The title of your alert. 
+title: O título do seu alerta.
 
-message: The message of your alert (You can set just a message or just a title).
+message: A mensagem que você deseja passar (Você pode passar como parametro um title e message, ou somente um dos dois).
 
-trigger: The event trigger of the alert, it must be a JavaScript event trigger (the trigger propriety is optional),
-        example: "click", "mouseleave", "mouseenter"
+trigger: O Gatilho para o alerta, uma opção caso deseje usar um alerta de forma simples ao clicar em um botão por exemplo,
+        são usados os gatilhos do JavaScript (esta propriedade é opcional).
+        exemplos: "click", "mouseleave", "mouseenter"
 
-target: if you set a trigger propriety, you must set an target for the trigger, it's selected by a querySelecctor, so you must use his
-        synthax. for example use "#target" to select an element by id.
+target: Se você definir a propriedade trigger, será necessário definir um alvo que ativara o gatilho por meio desta propriedade,
+        o alvo será selecionado por meio de um querySelector, logo você tera que usar a sintaxe deste.
+        exemplo: " target:'#divTarget' "
 
-both trigger and target proprieties are optionals, you can just add a message and title!
+Ambas as propriedades trigger e targets são opcionais, você pode usar somente as propriedades title e message
 
-  - Simple use:
+  - Uso simples:
         
         new quickal({
-            title: "This is a Quick Alert :D",
-            message: "A simple way to make a personalized alert in your project!",
+            title: "Este é um alerta do Quick Alert :D",
+            message: "uma maneira rápida de adicionar alertas personalizados ao seu projeto!",
             trigger: "click",
             target: "#alertbtn1"
         })
 
-  - Personalized use:
+  - Uso personalizado:
    
         function showalert() {
             const txt2 = document.querySelector("#text2")
             const txt = document.querySelector("#text")
             if (txt.value.length == 0 && txt2.value.length == 0) {
                 new quickal({
-                    title: "Error",
-                    message: "There is no text :("
+                    title: "Erro",
+                    message: "Nenhum texto foi inserido :("
                 })
             } else {
                 new quickal({
@@ -42,4 +44,4 @@ both trigger and target proprieties are optionals, you can just add a message an
             }
         }
         
-  Check the demo to see more of how it works.
+  Acesse a demo dentro do projeto para melhor entendimento do funcionamento.
