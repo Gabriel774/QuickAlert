@@ -45,4 +45,4 @@ Ambas as propriedades trigger e targets são opcionais, você pode usar somente 
             }
         }
         
-  Use a demo dentro do projeto para melhor entendimento do funcionamento.
+  Acesse a demo dentro do projeto para melhor entendimento do funcionamento.
