@@ -1,5 +1,5 @@
 # Quick Alert
-Quick Alert é uma maneira rápida de adicionar alertas personalizados a seu projeto
+Quick Alert é uma maneira rápida de adicionar alertas personalizados ao seu projeto
 
 o uso do Quick Alert é muito simples, você pode passar um objeto com até quatro propriedades:
 
