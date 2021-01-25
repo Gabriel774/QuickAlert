@@ -15,14 +15,13 @@ target: Se você definir a propriedade trigger, será necessário definir um alv
         o alvo será selecionado por meio de um querySelector, logo você tera que usar a sintaxe deste.
         exemplo: " target:'#divTarget' "
 
-both trigger and target proprieties are optionals, you can just add a message and title!
 Ambas as propriedades trigger e targets são opcionais, você pode usar somente as propriedades title e message
 
   - Uso simples:
         
         new quickal({
             title: "Este é um alerta do Quick Alert :D",
-            message: "uma maneira rápida de adicionar alertas personalizados a seu projeto!",
+            message: "uma maneira rápida de adicionar alertas personalizados ao seu projeto!",
             trigger: "click",
             target: "#alertbtn1"
         })
@@ -35,7 +34,7 @@ Ambas as propriedades trigger e targets são opcionais, você pode usar somente 
             if (txt.value.length == 0 && txt2.value.length == 0) {
                 new quickal({
                     title: "Erro",
-                    message: "Você não inseriu nenhum texto :("
+                    message: "Nenhum texto foi inserido :("
                 })
             } else {
                 new quickal({
