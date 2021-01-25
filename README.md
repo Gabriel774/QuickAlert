@@ -21,7 +21,7 @@ Ambas as propriedades trigger e targets são opcionais, você pode usar somente 
   - Uso simples:
         
         new quickal({
-            title: "Está é um alerta do Quick Alert :D",
+            title: "Este é um alerta do Quick Alert :D",
             message: "uma maneira rápida de adicionar alertas personalizados a seu projeto!",
             trigger: "click",
             target: "#alertbtn1"
