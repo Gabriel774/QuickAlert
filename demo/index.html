@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,56 +96,61 @@
     <h1 style="font-size: 52pt; text-align: center; margin-bottom: 0px; margin-top: 25px; font-family: 'Noto Sans JP', sans-serif;">
         <span style="color: #0288d1;">Q</span>uick
         <span style="color: tomato;">A</span>lert</h1>
-    <h3 style="text-align:center;">A simple way to add an alert to your project</h3>
-    <h2 style="text-align: center; margin-top: 100px;">Examples</h2>
+    <h3 style="text-align:center;"> uma maneira rápida de adicionar alertas personalizados ao seu projeto </h3>
+    <h2 style="text-align: center; margin-top: 100px;">Exemplos</h2>
     <div id="container">
         <div class="demo">
-            <h3 class="title-margin">Click in the button below to active an alert!</h3>
-            <button id="alertbtn1" class="btn">Click me</button>
+            <h3 class="title-margin">Clique no botão abaixo para ativar um alerta!</h3>
+            <button id="alertbtn1" class="btn">Clique em mim</button>
         </div>
 
         <hr class="line">
 
         <div class="demo">
-            <h3 class="title-margin">Enter a title and message in the inputs below!</h3>
+            <h3 class="title-margin">Digite um título e uma mensagem nos inputs abaixo!</h3>
             <input type="text" id="text" class="inp" placeholder="Title">
             <input type="text" id="text2" class="inp" placeholder="Message">
-            <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Show alert</button>
+            <button id="alertbtn2" onclick="showalert()" class="btn" style="display: block; margin: auto;">Mostrar Alerta</button>
         </div>
     </div>
-    <h4 style="text-align: center; margin-top: 50px; margin-bottom: 20px;">Check the code or the <a
-            href="https://github.com/Gabriel774/QuickAlert">GitHub documentation</a> for more details.</h4>
+    <h4 style="text-align: center; margin-top: 50px; margin-bottom: 20px;">Visualize o código desta página ou a <a
+            href="https://github.com/Gabriel774/QuickAlert">documentação do GitHub</a> para mais detalhes.</h4>
     <script>
-        /* the use of an Quick alert is very simple, there is four proprieties:
-        title: The title of your alert. 
+        /* Quick Alert é uma maneira rápida de adicionar alertas personalizados a seu projeto
 
-        message: The message of your alert (You can set just a message or just a title).
+        o uso do Quick Alert é muito simples, você pode passar um objeto com até quatro propriedades:
 
-        trigger: The event trigger of the alert, it must be a JavaScript event trigger (the trigger propriety is optional),
-        example: "click", "mouseleave", "mouseenter"
+        title: O título do seu alerta.
 
-        target: if you set a trigger propriety, you must set an target for the trigger, it's selected by a querySelecctor, so you must use his
-        synthax. for example use "#target" to select an element by id.
+        message: A mensagem que você deseja passar (Você pode passar como parametro um title e message, ou somente um dos dois).
 
-        both trigger and target proprieties are optionals, you can just add a message and title!*/
+        trigger: O Gatilho para o alerta, uma opção caso deseje usar um alerta de forma simples ao clicar em um botão por exemplo,
+            são usados os gatilhos do JavaScript (esta propriedade é opcional).
+            exemplos: "click", "mouseleave", "mouseenter"
+
+        target: Se você definir a propriedade trigger, será necessário definir um alvo que ativara o gatilho por meio desta propriedade,
+            o alvo será selecionado por meio de um querySelector, logo você tera que usar a sintaxe deste.
+            exemplo: " target:'#divTarget' "
+
+        Ambas as propriedades trigger e targets são opcionais, você pode usar somente as propriedades title e message*/
 
 
-        //simple use
+        //Uso Simples
         new quickal({
-            title: "This is a Quick Alert :D",
-            message: "A simple way to make a personalized alert in your project!",
+            title: "Este é um alerta do Quick Alert :D :D",
+            message: "Uma maneira rápida de adicionar alertas personalizados ao seu projeto!",
             trigger: "click",
             target: "#alertbtn1"
         })
 
-        //personalized use
+        //Uso personalizado
         function showalert() {
             const txt2 = document.querySelector("#text2")
             const txt = document.querySelector("#text")
             if (txt.value.length == 0 && txt2.value.length == 0) {
                 new quickal({
-                    title: "Error",
-                    message: "There is no text :("
+                    title: "Erro",
+                    message: "Nenhum texto foi inserido :("
                 })
             } else {
                 new quickal({
